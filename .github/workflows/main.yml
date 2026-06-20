@@ -1,0 +1,10 @@
+run: |
+  curl -X POST "${{ secrets.KOMODO_WEBHOOK_URL }}" \
+  -H "Content-Type: application/json" \
+  -d @- <<EOF
+{
+  "secret": "${{ secrets.KOMODO_WEBHOOK_SECRET }}",
+  "event": "deploy",
+  "source": "github-actions"
+}
+EOF
