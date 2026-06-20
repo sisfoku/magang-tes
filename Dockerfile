@@ -8,7 +8,9 @@ RUN npm ci
 
 COPY backend .
 
-RUN npm run build
+RUN npx nest build
+RUN npx tsc -v
+RUN npx nest --version
 
 EXPOSE 3005
 
