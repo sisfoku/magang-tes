@@ -10,6 +10,6 @@ COPY backend .
 
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 3005
 
 CMD ["node", "dist/main.js"]
