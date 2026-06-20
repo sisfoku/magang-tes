@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+
+    container_name: aplikasi
+
+    restart: unless-stopped
+
+    ports:
+      - "3005:3005"
